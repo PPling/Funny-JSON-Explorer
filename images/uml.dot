@@ -1,0 +1,25 @@
+digraph "classes" {
+charset="utf-8"
+rankdir=BT
+"0" [label="{Container|children : list\licon : NoneType\llevel\lname\l|add_child(child)\ldraw()\l}", shape="record"];
+"1" [label="{Leaf|icon : NoneType\lname\l|draw()\l}", shape="record"];
+"2" [label="{ExplorerBuilder|factory\l|build(style_name, icon_family_name)\l}", shape="record"];
+"3" [label="{ExplorerFactory|icon_family_factory\lstyle_factory\l|create_style(style_name)\lget_icon_family(icon_family_name)\lload_icon_families(icon_families_config)\l}", shape="record"];
+"4" [label="{FunnyJsonExplorer|icon_family\lroot_container\lstyle\l|show(data)\l}", shape="record"];
+"5" [label="{IconFamily|container\lleaf\lname\l|get_container_icon()\lget_leaf_icon()\l}", shape="record"];
+"6" [label="{IconFamilyFactory|manager\l|create_icon_family(icon_family_name, icons)\lget_icon_family(icon_family_name)\lload_icon_families(icon_families_config)\l}", shape="record"];
+"7" [label="{IconFamilyManager|icon_families : dict\l|add_icon_family(name, container, leaf)\lget_all_icon_families()\lget_icon_family(name)\l}", shape="record"];
+"8" [label="{RectangleStyle|\l|draw(data, icon_family)\l}", shape="record"];
+"9" [label="{Style|\l|draw(data, icon_family)\l}", shape="record"];
+"10" [label="{StyleFactory|\l|create_style(style_name)\l}", shape="record"];
+"11" [label="{TreeStyle|\l|draw(data, icon_family)\l}", shape="record"];
+
+"8" -> "9" [arrowhead="empty", arrowtail="none"];
+"11" -> "9" [arrowhead="empty", arrowtail="none"];
+"0" -> "4" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="root_container", style="solid"];
+"6" -> "3" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="icon_family_factory", style="solid"];
+"10" -> "3" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="style_factory", style="solid"];
+"7" -> "6" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="manager", style="solid"];
+"5" -> "7" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="icon_families", style="solid"];
+"1" -> "0" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="children", style="solid"];
+}

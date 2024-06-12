@@ -1,0 +1,20 @@
+{
+  "styles": {
+    "tree": "tree_style.py",
+    "rectangle": "rectangle_style.py"
+  },
+  "icon_families": {
+    "pocker": {
+      "icon_container": "♢",
+      "icon_leaf": "♤"
+    },
+    "fire_water": {
+      "icon_container": "🔥",
+      "icon_leaf": "💧"
+    },
+    "emoji":{
+      "icon_container": "😇",
+      "icon_leaf": "🤗"
+    }
+  }
+}
